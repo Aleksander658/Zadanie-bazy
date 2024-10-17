@@ -13,14 +13,8 @@
         <h1>Dziennik</h1>
     </header>
     <main>
-        <h3>Matematyka</h3>
-        <table border="1">
-            <tr>
-                <th>Nr</th>
-                <th>Imię</th>
-                <th>Nazwisko</th>
-                <th>Ocena</th>
-            </tr>
+        <h3>J.Polski</h3>
+       <section>
             <?php
 $polaczenie = mysqli_connect('localhost', 'root', '', 'szkola');
 
@@ -29,12 +23,11 @@ $dane = "SELECT * FROM uczen";
 $wynik = mysqli_query($polaczenie, $dane);
 
 while($uczen = mysqli_fetch_assoc($wynik)){
-    echo "<tr><td>" . $uczen['ID'] . "</td><td>" . $uczen['Imie'] . "</td><td>" . $uczen['Nazwisko'] . "</td><td>" . $uczen['Ocena'] . "</td></tr>";
+    echo "<div id=\"blok\">Nr." . $uczen['ID'] . "<br>Imię: " . $uczen['Imie'] . "<br>Nazwisko: " . $uczen ['Nazwisko'] . "<br>Ocena: " . $uczen['Ocena'] . "</div>";
 }
-
 mysqli_close($polaczenie);
 ?>
-        </table>
+<section>
     </main>
     <aside>
         <ul>
