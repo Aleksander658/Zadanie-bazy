@@ -75,7 +75,7 @@ p {
 }
 
 #blok {
-    background-color: red;
+    background-color: black;
     color: #fff;
     width: 150px;
     height: 150px;
@@ -90,5 +90,30 @@ section {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    line-height: 35px;
+    line-height: 30px;
+}
+
+aside a {
+    color: #fff;
+    text-decoration: none;
+}
+
+aside a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+div {
+    padding: 2px;
+    margin: 2px;
 }

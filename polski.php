@@ -18,12 +18,12 @@
             <?php
 $polaczenie = mysqli_connect('localhost', 'root', '', 'szkola');
 
-$dane = "SELECT * FROM uczen";
+$dane = "SELECT * FROM polski";
 
 $wynik = mysqli_query($polaczenie, $dane);
 
-while($uczen = mysqli_fetch_assoc($wynik)){
-    echo "<div id=\"blok\">Nr." . $uczen['ID'] . "<br>Imię: " . $uczen['Imie'] . "<br>Nazwisko: " . $uczen ['Nazwisko'] . "<br>Ocena: " . $uczen['Ocena'] . "</div>";
+while($polski = mysqli_fetch_assoc($wynik)){
+    echo "<div id=\"blok\">Nr." . $polski['ID'] . "<br>Imię: " . $polski['Imie'] . "<br>Nazwisko: " . $polski ['Nazwisko'] . "<br>Ocena: " . $polski['Ocena'] . "</div>";
 }
 mysqli_close($polaczenie);
 ?>
@@ -33,12 +33,11 @@ mysqli_close($polaczenie);
         <ul>
             <li><a href="index.php">Matematyka</a></li>
             <li><a href="polski.php">Język Polski</a></li>
-            <li>Język Angielski</li>
+            <li><a href="ocena.php">Dodaj ocenę</a></li>
         </ul>
     </aside>
     <footer>
-        <p>ZSZ Bobowa</p>
+    <p><a href="https://zsz.bobowa.pl/">ZSZ Bobowa</a></p>
     </footer>
 </body>
-
 </html>
